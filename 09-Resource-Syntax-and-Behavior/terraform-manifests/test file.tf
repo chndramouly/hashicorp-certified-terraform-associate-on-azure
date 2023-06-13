@@ -1,4 +1,4 @@
-# Resource-2: Create Virtual Network
+Resource-2: Create Virtual Network
 resource "azurerm_virtual_network" "myvnet" {
   name                = "myvnet-1"
   address_space       = ["10.0.0.0/16", "10.0.0.32"]
@@ -10,7 +10,7 @@ resource "azurerm_virtual_network" "myvnet" {
   }
 }
 
-# Resource-3: Create Subnet
+Resource-3: Create Subnet
 resource "azurerm_subnet" "mysubnet" {
   name                 = "mysubnet-1"
   resource_group_name  = azurerm_resource_group.myrg.name
@@ -18,7 +18,7 @@ resource "azurerm_subnet" "mysubnet" {
   address_prefixes     = ["10.0.2.0/24"]
 }
 
-# Resource-4: Create Public IP Address
+#Resource-4: Create Public IP Address
 resource "azurerm_public_ip" "mypublicip" {
   name                = "mypublicip-1"
   resource_group_name = azurerm_resource_group.myrg.name
@@ -29,7 +29,7 @@ resource "azurerm_public_ip" "mypublicip" {
   }
 }
 
-# Resource-5: Create Network Interface
+#Resource-5: Create Network Interface
 resource "azurerm_network_interface" "myvmnic" {
   name                = "vmnic"
   location            = azurerm_resource_group.myrg.location

@@ -1,5 +1,4 @@
 #Resource 1 - Create a resource group
-
 resource "azurerm_resource_group" "myrg" {
     name = "azurerm_resource_group.myorg.name"
     location = azurerm_resource_group.myrg,name
@@ -21,7 +20,7 @@ resource "azurerm_virtual_network" "myvnet" {
 
 #Resource 3 - Create a subnet
 resource "azurerm_subnet" "mysubnet-1" {
-name = "mysubnet-1"
+Name = "mysubnet-1"
 azurerm_resource_group = azurerm_resource_group.myg.name
 virtual_network_name = azurerm_virtual_network.myvnet.name
 address_prefixes = [ "10.0.1.32" ]
